@@ -8,6 +8,7 @@ while(True):
  
  if(user_n==ran_n):
   print "You guessed the right number"
+  break
  elif((user_n-ran_n) < 0):
   print"You guessed too low"
  elif((user_n-ran_n) >0 ):
