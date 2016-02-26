@@ -1,0 +1,19 @@
+import random
+nGuess=0
+ran_n=random.randint(1,9)
+while(True):
+ 
+ user_n=int(raw_input("Guess a number: "))
+ nGuess+=1
+ 
+ if(user_n==ran_n):
+  print "You guessed the right number"
+ elif((user_n-ran_n) < 0):
+  print"You guessed too low"
+ elif((user_n-ran_n) >0 ):
+  print "You guessed too high"
+ con=raw_input("Do you want to quit(quit)")
+ if (con.lower() == "quit"):
+   break
+print "Random number was "+ str(ran_n)   
+print "No. of guesses = " + str(nGuess)   
