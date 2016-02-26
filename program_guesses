@@ -1,0 +1,24 @@
+low=1
+high=100
+num=(low+high)/2
+cnt=0
+print "Number is "+ str(num)
+ans=raw_input("Is this the correct number(Yes(Y),Too High(H), Too Low(L)?:")
+cnt= cnt + 1
+while(ans.upper() != "Y"):
+ if(ans.upper()=="H"):
+  high=num-1
+  num=(low+high)/2
+  cnt=cnt+1
+  print "Number is "+ str(num)
+  ans=raw_input("Is this the correct number(Yes(Y),Too High(H), Too Low(L)?: ")
+ elif(ans.upper()=="L"):
+  low=num+1
+  num=(low+high)/2
+  cnt=cnt+1
+  print "Number is "+ str(num)
+  ans=raw_input("Is this the correct number(Yes(Y),Too High(H), Too Low(L)?: ")
+ else:
+   print " Please enter either Y,H or L"
+   ans=raw_input("Is this the correct number(Yes(Y),Too High(H), Too Low(L)?: ")
+print "Number of guesses required " +str(cnt)   
